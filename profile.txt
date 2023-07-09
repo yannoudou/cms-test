@@ -1,0 +1,9 @@
+-DMAGNOLIA_PROFILE=development
+-DMAGNOLIA_INSTANCE_TYPE=author
+-Dmagnolia.yaml.envsubst=true
+-Dibe.magnolia.server.defaultBaseUrl=http://localhost
+-Dibe.magnolia.modules.publishing-core.config.receivers.magnoliaPublic8080.enabled=false
+-Dibe.magnolia.modules.mail.config.smtpConfiguration.server=localhost
+-Dibe.magnolia.modules.mail.config.smtpConfiguration.port=1025
+-Dibe.magnolia.modules.mail.config.smtpConfiguration.security=none
+-Dibe.magnolia.modules.mail.config.smtpConfiguration.authentication.class=info.magnolia.module.mail.smtp.authentication.NullSmtpAuthentication
