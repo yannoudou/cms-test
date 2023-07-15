@@ -1,0 +1,24 @@
+site:
+  i18n:
+    system:
+      fallbackLanguage: en
+      languages:
+        en:
+          country:
+          enabled: true
+          language: en
+        fr:
+          country:
+          enabled: true
+          language: fr
+        de:
+          country:
+          enabled: true
+          language: de
+  templates:
+    availability:
+      templates:
+        basic:
+          id: "website:pages/static-page"
+        raw:
+          id: "website:pages/static-page-raw"

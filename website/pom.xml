@@ -37,6 +37,44 @@
       <artifactId>magnolia-core</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>info.magnolia.site</groupId>
+      <artifactId>magnolia-site</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.resources</groupId>
+      <artifactId>magnolia-resources</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.cache</groupId>
+      <artifactId>magnolia-cache-core</artifactId>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.rest</groupId>
+      <artifactId>magnolia-rest-integration</artifactId>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-module-mail</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.22</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
     <!-- TEST -->
     <dependency>
       <groupId>junit</groupId>

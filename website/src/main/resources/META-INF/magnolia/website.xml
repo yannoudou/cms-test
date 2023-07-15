@@ -16,6 +16,34 @@
       <name>core</name>
       <version>*</version>
     </dependency>
+    <dependency>
+      <name>rendering</name>
+      <version>*</version>
+    </dependency>
+    <dependency>
+      <name>site</name>
+      <version>*</version>
+    </dependency>
+    <dependency>
+      <name>ui-admincentral</name>
+      <version>*</version>
+    </dependency>
+    <dependency>
+      <name>publishing-core</name>
+      <version>*</version>
+    </dependency>
+    <dependency>
+      <name>rest-integration</name>
+      <version>*</version>
+    </dependency>
+    <dependency>
+      <name>cache</name>
+      <version>*</version>
+    </dependency>
+    <dependency>
+      <name>mail</name>
+      <version>*</version>
+    </dependency>
     <!--  Add other dependencies here, e.g the mte (magnolia templating essentials).
     <dependency>
       <name>mte</name>

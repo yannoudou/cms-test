@@ -1,0 +1,26 @@
+version: '3.0'
+
+volumes:
+  mail-data:
+
+services:
+  proxy:
+    image: nginx:alpine
+    volumes:
+      - "./nginx/conf.d:/etc/nginx/conf.d"
+      - "./maintanence.html:/usr/share/nginx/html/index.html"
+    ports:
+      - "80:80"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  mail:
+    image: rnwood/smtp4dev:v3
+    ports:
+      - "8025:80" # web
+      - "1025:25" # smtp
+      - "1143:143" # imap
+    volumes:
+      - mail-data:/smtp4dev
+    environment:
+      - ServerOptions__NumberOfMessagesToKeep=100

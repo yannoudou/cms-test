@@ -1,0 +1,5 @@
+form:
+  properties:
+    value:
+      $type: richTextField
+      i18n: true

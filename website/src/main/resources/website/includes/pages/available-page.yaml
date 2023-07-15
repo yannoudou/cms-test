@@ -1,0 +1,4 @@
+main:
+  availableComponents:
+    richText:
+      id: website:components/richText

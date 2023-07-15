@@ -1,0 +1,3 @@
+permissions: !override
+  roles:
+    superuser:superuser

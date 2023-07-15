@@ -1,0 +1,6 @@
+title: Page Static avec Layout
+dialog: website:pages/static-page
+renderType: spa
+class: info.magnolia.rendering.spa.renderer.SpaRenderableDefinition
+areas: !include:/website/includes/available-page.yaml
+

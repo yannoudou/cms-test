@@ -11,59 +11,79 @@
   <name>coutest-cms: webapp</name>
   <packaging>war</packaging>
   <dependencies>
-    <!--
-     Add your project specific dependencies here:
-     A custom webapp typically is based on a magnolia webapp. The most simple and reduced bundle to start with is the "magnolia-empty-webapp" (see "option i" below).
-     To see a complete list of preconfigured Magnolia webapps, have a look at https://documentation.magnolia-cms.com/display/DOCS/Bundles+and+webapps
-     => Please just use one of the four below listed options!
-     Make sure to use the appropriate option (A or B) in the parent pom
-    -->
-
-    <!-- option i - magnolia-empty-webapp -->
-    <!-- Dependencies versions are already imported by parent pom. Requires "Option A" in the parent pom. -->
     <dependency>
-      <groupId>info.magnolia</groupId>
-      <artifactId>magnolia-empty-webapp</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>info.magnolia</groupId>
-      <artifactId>magnolia-empty-webapp</artifactId>
+      <groupId>info.magnolia.bundle</groupId>
+      <artifactId>magnolia-community-webapp</artifactId>
       <type>pom</type>
+      <exclusions>
+        <!-- disable JavaScript models -->
+        <!-- The Nashorn JavaScript engine required to use JS models has been removed with Java 17 -->
+        <exclusion>
+          <groupId>info.magnolia.javascript-models</groupId>
+          <artifactId>magnolia-module-javascript-models</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>info.magnolia.restclient</groupId>
+          <artifactId>magnolia-rest-client-app</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>info.magnolia.categorization</groupId>
+          <artifactId>magnolia-categorization</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>info.magnolia.categorization</groupId>
+          <artifactId>magnolia-categorization-support</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>info.magnolia.categorization</groupId>
+          <artifactId>magnolia-categorization-app</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>info.magnolia.categorization</groupId>
+          <artifactId>magnolia-categorization-app-compatibility</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>info.magnolia.categorization</groupId>
+          <artifactId>magnolia-categorization-rss-integration</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>info.magnolia.form</groupId>
+          <artifactId>magnolia-form</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>info.magnolia.messages</groupId>
+          <artifactId>magnolia-messages-app</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>info.magnolia.templating</groupId>
+          <artifactId>magnolia-templating-kit-2</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>info.magnolia.templating</groupId>
+          <artifactId>magnolia-templating-kit</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
-
-
-    <!-- option ii - magnolia-community-webapp -->
-    <!-- Dependencies versions are already imported by parent pom. Requires "Option A" in the parent pom. -->
-    <!--
     <dependency>
       <groupId>info.magnolia.bundle</groupId>
       <artifactId>magnolia-community-webapp</artifactId>
       <type>war</type>
     </dependency>
     <dependency>
-      <groupId>info.magnolia.bundle</groupId>
-      <artifactId>magnolia-community-webapp</artifactId>
-      <type>pom</type>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-module-mail</artifactId>
     </dependency>
-    -->
 
-
-    <!-- option iii - magnolia-dx-core-webapp -->
-    <!-- Dependencies versions are already imported by parent pom. Requires "Option B" in the parent pom. -->
-    <!--
     <dependency>
-      <groupId>info.magnolia.dx</groupId>
-      <artifactId>magnolia-dx-core-webapp</artifactId>
-      <type>war</type>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
     </dependency>
-    <dependency>
-      <groupId>info.magnolia.dx</groupId>
-      <artifactId>magnolia-dx-core-webapp</artifactId>
-      <type>pom</type>
-    </dependency>
-    -->
 
+    <dependency>
+      <groupId>com.coutest</groupId>
+      <artifactId>website</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
   </dependencies>
 
   <build>

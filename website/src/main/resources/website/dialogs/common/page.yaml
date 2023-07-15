@@ -1,0 +1,58 @@
+form:
+  properties:
+    title:
+      $type: textField
+      i18n: true
+    navigationTitle:
+      $type: richTextField
+      i18n: true
+    hideInNavbar:
+      $type: checkBoxField
+      i18n: true
+    metaTitle:
+      $type: richTextField
+      i18n: true
+    metaDescription:
+      $type: richTextField
+      i18n: true
+    socialMediaTitle:
+      $type: richTextField
+      i18n: true
+    socialMediaDescription:
+      $type: richTextField
+      i18n: true
+    socialMediaImage:
+      $type: richTextField
+      i18n: true
+    robots:
+      $type: checkBoxGroupField
+      defaultValue:
+        - index
+        - follow
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: index
+            value: index
+          - name: noindex
+            value: noindex
+          - name: follow
+            value: follow
+          - name: nofollow
+            value: nofollow
+  layout:
+    $type: tabbedLayout
+    tabs:
+      - name: main
+        fields:
+          - title
+          - navigationTitle
+          - hideInNavbar
+      - name: meta
+        fields:
+          - metaTitle
+          - metaDescription
+          - socialMediaTitle
+          - socialMediaDescription
+          - socialMediaImage
+          - robots
